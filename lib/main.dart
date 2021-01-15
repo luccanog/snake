@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('GAME OVER'),
-            content: Text('You\'re score: ' + snakePosition.length.toString()),
+            content: Text('You\'re score: ' + (snakePosition.length - 5).toString()),
             actions: <Widget>[
               FlatButton(
                 child: Text('Play Again'),
@@ -204,8 +204,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Text(
-                  /** @todo: add score count */
-                  'Score',
+                  's c o r e   ${(snakePosition.length - 5).toString()}',
                   style: TextStyle(color: Colors.white, fontSize: 20),
                 )
               ],
